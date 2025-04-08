@@ -1,5 +1,5 @@
-#  **<span style="color:green">ktech academy, lagos, london.</span>**
-### **<span style="color:green">Contacts: +23470110450603<br> WebSite : <http://ktechacademy.net/></span>**
+#  **<span style="color:green">Ktech Academy, Lagos, London.</span>**
+### **<span style="color:green">Contacts: +2347011045060<br> WebSite : <http://ktechacademy.net/></span>**
 ### **Email: kdevopsengineering@gmail.com**
 
 
