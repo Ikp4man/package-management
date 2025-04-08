@@ -14,7 +14,7 @@ cd /opt
 
 # 1.Install prerequisit: JAVA, git, unzip
 sudo yum install wget git nano unzip -y
-sudo yum install java-11-openjdk-devel java-1.8.0-openjdk-devel -y
+sudo yum install java-17-openjdk-devel java-1.8.0-openjdk-devel -y
 # 2. Download nexus software and extract it (unzip)
 # sudo wget http://download.sonatype.com/nexus/3/nexus-3.15.2-01-unix.tar.gz
 sudo wget -O nexus.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz
