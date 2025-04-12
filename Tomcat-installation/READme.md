@@ -1,6 +1,6 @@
-#  **<span style="color:green">Landmark Technologies, Ontario, Canada.</span>**
-### **<span style="color:green">Contacts: +1437 215 2483<br> WebSite : <http://mylandmarktech.com/></span>**
-### **Email: mylandmarktech@gmail.com**
+#  **<span style="color:green">Ktech Academy, Ontario, Canada.</span>**
+### **<span style="color:green">Contacts: +2347011045060<br> WebSite : <http://ktechacademy.net/></span>**
+### **Email: kdevopsengineeringh@gmail.com**
 
 
 
