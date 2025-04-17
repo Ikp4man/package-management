@@ -67,3 +67,42 @@ curl -v localhost:9000
 default USERNAME: admin
 default password: admin
 ```
+New installation script updated 2025
+
+#!/bin/bash
+
+# 1. Create a sonar user
+sudo useradd -m -d /opt/sonarqube -s /bin/bash sonar
+
+# 2. Grant sudo access to sonar user without requiring a password
+echo "sonar ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/sonar
+
+# 3. Optionally, set the hostname (skip if not needed)
+sudo hostnamectl set-hostname sonar
+
+# 4. Install required packages
+sudo apt update
+sudo apt install -y unzip wget git openjdk-17-jdk openjdk-8-jdk
+
+# 5. Switch to /opt directory for installing SonarQube
+cd /opt
+----------------------------------------------------------------------------------------
+#sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-2025.1.zip
+-------------------------------------------------------------------------------------------
+# 6. Download and extract SonarQube 7.8 (use a newer version if needed)
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.6.92038.zip
+sudo unzip sonarqube-9.9.6.92038.zip
+sudo rm -rf sonarqube-9.9.6.92038.zip
+sudo mv sonarqube-9.9.6.92038 sonarqube       
+
+# 7. Grant permissions to sonar user for managing SonarQube
+sudo chown -R sonar:sonar /opt/sonarqube/
+sudo chmod -R 775 /opt/sonarqube/
+
+# 8. Start SonarQube as sonar user
+sudo su - sonar -c "sh /opt/sonarqube/sonarqube-9.9.6.92038/bin/linux-x86-64/sonar.sh start"
+
+# 9. Check the status of SonarQube
+sudo su - sonar -c "sh /opt/sonarqube/sonarqube-9.9.6.92038/bin/linux-x86-64/sonar.sh status"
+
+echo "SonarQube installation complete. Access it via http://<your-server-ip>:9000"
